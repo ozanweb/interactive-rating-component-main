@@ -29,12 +29,7 @@ html {
 
 body {
   min-width: 375px;
-  /* color: hsl(0, 0%, 100%); */
- 
-  color: hsl(216, 12%, 54%);
   color: hsl(217, 12%, 63%);
-  /* color: hsl(213, 19%, 18%); */
-  /* color: hsl(216, 12%, 8%); */
   position: absolute;
   left: 0; top: 0; right: 0; bottom: 0;
   background-color: hsl(216, 12%, 8%);
@@ -65,10 +60,6 @@ main {
   width: 22rem;
 }
 
-.rating {
-
-}
-
 figure {
   display: flex;
   background-color: hsl(213, 18%, 24%);
@@ -77,12 +68,7 @@ figure {
   border-radius: 1.5rem;
   align-items: center;
   justify-content: center;
-  /* padding: .25rem 0; */
   margin: .5rem 0;
-}
-
-figure img {
-
 }
 
 h1 {
@@ -134,8 +120,6 @@ input:checked ~ p {
   
 }
 
-
-
 button[type = "submit"] {
   color: hsl(0, 0%, 100%);
   letter-spacing: .125rem;
@@ -177,8 +161,6 @@ button[type = "submit"]:hover {
   padding: .25rem 1rem;
   color: 	hsl(25, 97%, 53%);
 }
-
-
 
 @media screen and (min-width: 640px) {
   :root {
