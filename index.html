@@ -3,87 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <style>
-
-    /* Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
-
-    *, *::after, *::before {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
-    :root {
-      font-size: calc(1.85vw + .5em);
-    }
-
-    html {
-      font-family: 'Overpass', sans-serif;
-    }
-
-    body {
-      min-width: 375px;
-      /* color: hsl(0, 0%, 100%); */
-     
-      color: hsl(216, 12%, 54%);
-      color: hsl(217, 12%, 63%);
-      /* color: hsl(213, 19%, 18%); */
-      /* color: hsl(216, 12%, 8%); */
-      position: absolute;
-      left: 0; top: 0; right: 0; bottom: 0;
-      background-color: hsl(216, 12%, 8%);
-    }
-
-    h1 {
-      font-size: 1.75rem;
-    }
-
-    main {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      margin: 0 1.25rem;
-      padding: 0 1.25rem;
-      background-color: hsl(213, 19%, 18%);
-    }
-
-    figure {
-      background-color: hsl(215, 18%, 21%);
-      
-    }
-
-    h1 {
-      font-weight: 700;
-      color: hsl(0, 0%, 100%);
-    }
-
-    button[type = "submit"] {
-      font-family: 'Overpass', sans-serif;
-      text-transform: uppercase;
-      background-color: 	hsl(25, 97%, 53%);
-      border: none;
-      width: 100%;
-    }
-
-    .thankyou {
-      display: none; /* ! */
-    }
-
-
-  </style>
 </head>
 <body>
 
   <main role="main">
     <!-- Rating state start -->
-    <div class="rating">
+    <form id="rating" role="form" class="rating">
       <figure>
         <img src="images/icon-star.svg" alt="star">
       </figure>
@@ -93,16 +23,35 @@
       </p>
       <div class="scores">
         <label for="one">
-          <input name="one" type="radio">
-          1
+          <input id="one" class="score" name="score" type="radio" value="1">
+          <p>1</p>
+        </label>
+        <label for="two">
+          <input id="two" class="score" name="score" type="radio" value="2">
+          <p>2</p>
+        </label>
+        <label for="three">
+          <input id="three" class="score" name="score" type="radio" value="3">
+          <p>3</p>
+        </label>
+        <label for="four">
+          <input id="four" class="score" name="score" type="radio" value="4">
+          <p>4</p>
+        </label>
+        <label for="five">
+          <input id="five" class="score" name="score" type="radio" value="5">
+          <p>5</p>
         </label>
       </div>
-      <button type="submit">Submit</button>
-    </div>
+      <button form="rating" type="submit" id="submitBtn">Submit</button>
+    </form>
     <!-- Rating state end -->
     <!-- Thank you state start -->
-    <div class="thankyou">
-      <div>You selected <!-- Add rating here --> out of 5</div>
+    <div id="response" class="response">
+      <img src="images/illustration-thank-you.svg" alt="">
+      <div class="message">
+        <p>You selected <span id="rate"></span> out of 5</p>
+      </div>
       <h1>Thank you!</h1>
       <p>
         We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
@@ -110,6 +59,7 @@
     </div>
     <!-- Thank you state end -->
   </main>
+  <script src="script.js"></script>
 
 </body>
 </html>
