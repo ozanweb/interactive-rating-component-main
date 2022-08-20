@@ -10,8 +10,9 @@ for(const radio of radios) {
   }
 }
 
-rating.addEventListener('submit', () => {
-  rating.setAttribute('id', 'hide')
-  response.setAttribute('id', 'unhide')
+rating.addEventListener('submit', (e) => {
+  rating.classList.add('hide')
+  response.classList.remove('hide')
+  e.preventDefault()
 })
 
